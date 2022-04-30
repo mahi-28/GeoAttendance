@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="your_array_data">
+        <item>Post</item>
+        <item>Library</item>
+        <item>Audio</item>
+        <item>Video</item>
+        <item>Book</item>
+        <item>Presentation</item>
+        <item>Theme</item>
+        <item>Sentences</item>
+
+    </array>
+
+
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/as_vpIntro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            app:ci_drawable_unselected="@color/black_transparent_50"
+            app:ci_drawable="@color/appthemcolor"
+            app:ci_width="6dp"
+            app:ci_height="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_Skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:layout_marginTop="05dp"
+            android:textColor="@color/headingColor"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</LinearLayout>

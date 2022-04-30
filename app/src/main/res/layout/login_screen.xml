@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/loginscreenbackground"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtlogoname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="@font/lobsterfont"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/windowBackground"
+        android:text="Path" />
+    <TextView
+        android:id="@+id/txtlogosubname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+   android:layout_below="@+id/txtlogoname"
+
+        android:textColor="@color/colornpink"
+        android:text="Sub Text here" />
+
+    <TextView
+        android:id="@+id/txtbottomtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/windowBackground"
+        android:text="This is the bottom text we can set number of lines here" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtbottomtxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Log In " />
+
+    <TextView
+        android:id="@+id/txtalreadyhaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnlogin"
+        android:gravity="center"
+        android:textColor="@color/windowBackground"
+        android:layout_marginBottom="10dp"
+        android:text="Already have path account ?" />
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtalreadyhaccount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Sign Up " />
+
+</RelativeLayout>

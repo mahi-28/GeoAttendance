@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:clickable="true"
+            android:id="@+id/Exceptioncount"
+            android:paddingLeft="@dimen/pad_8dp"
+            android:paddingRight="@dimen/pad_8dp"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/view"
+            android:layout_alignEnd="@+id/view">
+
+
+            <TextView
+                android:textColor="@color/windowBackground"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/Number_Cl"
+                android:textSize="@dimen/txt_14sp"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_10sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Number_Cl"
+                android:id="@+id/stringcl"
+                android:text="Issues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_above="@+id/view"
+            android:id="@+id/ViewClock"
+            android:textColor="@color/colornavigationdrawer"
+            android:textSize="@dimen/txt_14sp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:text="Clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_below="@+id/Exceptioncount"
+            android:layout_marginTop="@dimen/pad_1dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dip"
+            android:background="@color/colourlightgray"
+            android:id="@+id/view"
+            android:layout_marginLeft="@dimen/eight"
+            android:layout_marginRight="@dimen/eight"
+            ></View>
+        <RelativeLayout
+            android:layout_below="@+id/view"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:id="@+id/layoutclock"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:id="@+id/ProgressbarMyTime"
+                android:layout_centerHorizontal="true"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextClock
+                android:textColor="@color/colornavigationdrawer"
+                android:layout_marginTop="@dimen/twenty_five"
+                android:format24Hour="MMM dd, yyyy k:mm"
+                android:format12Hour="@null"
+                android:id="@+id/Digitalclock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="36sp"/>
+            <TextClock
+                android:textSize="@dimen/txt_14sp"
+                android:timeZone="GMT+5:30h"
+                android:format24Hour="MMM dd, yyyy "
+                android:format12Hour="MMM dd, yyyy "
+                android:textColor="@color/colorlightgrey"
+                android:id="@+id/Date"
+                android:gravity="center"
+                android:layout_below="@+id/Digitalclock"
+                android:text="Sept 26,2016"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/txt_14sp"
+                android:textColor="@color/colorlightgrey"
+                android:id="@+id/Location"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/Date"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:id="@+id/locationenabledisable"-->
+                <!--android:layout_below="@+id/Location"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_height="33dp">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:background="@drawable/geofenceenabledisable"-->
+                    <!--android:id="@+id/geofenceicon"-->
+                    <!--android:layout_height="30dp" />-->
+
+                <!--<TextView-->
+                    <!--android:textSize="@dimen/txt_14sp"-->
+                    <!--android:textColor="@color/colorlightgrey"-->
+                    <!--android:id="@+id/geofenceenableddisavle"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:layout_toRightOf="@+id/geofenceicon"-->
+                    <!--android:text="Geofencing enabled"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+
+            <!--</RelativeLayout>-->
+            <Button
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:id="@+id/BtnClock"
+                android:text=""
+                android:layout_below="@+id/Location"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/greenbutton"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_14sp"
+                android:layout_marginBottom="@dimen/linedinButtonTop"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/Location"
+    android:layout_marginBottom="05dp"
+    android:id="@+id/rosterreqrelative"
+    android:layout_height="wrap_content">
+    <Button
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/btnclockon"
+        android:text="Clock On"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/greenbutton"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:textAllCaps="false"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_14sp"
+        android:layout_marginBottom="@dimen/linedinButtonTop"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        />
+    <Button
+        android:visibility="visible"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/btnclockoff"
+        android:text="Clock Off"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/orangebutton"
+        android:fontFamily="sans-serif-medium"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+
+        android:textColor="@color/colorWhite"
+        android:layout_marginEnd="10dp"
+        android:textSize="@dimen/txt_14sp"
+        android:layout_marginBottom="@dimen/linedinButtonTop"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        />
+</RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:id="@+id/Centralview"
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorlightgrey"></View>
+
+
+        <TableLayout
+            android:id="@+id/tabbottom"
+            style="@style/Base.Widget.Design.TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/foutyOne"
+            android:layout_above="@+id/Centralview"
+            app:tabSelectedTextColor="@color/colornavigationdrawer"
+            app:tabTextColor="@color/colornavigationdrawer" />
+        <View
+            android:id="@+id/Centralbelow"
+            android:layout_width="match_parent"
+            android:layout_height="0.75dp"
+            android:layout_above="@+id/tabbottom"
+            android:background="@color/colornavigationdrawer">
+        </View>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Centralview"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/LoginProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+</RelativeLayout>

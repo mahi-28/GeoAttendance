@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "364102556302",
+    "project_id": "april26-a29c1",
+    "storage_bucket": "april26-a29c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364102556302:android:9b448fc95377a27c7cc7df",
+        "android_client_info": {
+          "package_name": "com.plutecoder.geoattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364102556302-356s99ghadtib9k8crbtjqedbnnf9gse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvX7cujigkurecOBtlCB5cQjqP_5pi9xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364102556302-356s99ghadtib9k8crbtjqedbnnf9gse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

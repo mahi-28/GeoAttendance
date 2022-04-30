@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SKN Attendance</string>
+
+    <string name="txtcontact">Entries</string>
+    <string name="txtchatlist">Clock </string>
+    <string name="txtcalllog">Other</string>
+    <string name="txtsetting">Setting</string>
+
+    <string name="gtext_slider_title1">Location based Attendance System</string>
+    <string name="gtext_slider_title2">We can help you to Track attendance</string>
+    <string name="gtext_slider_title3">You can manage your Event,Leaves</string>
+
+    <string name="gtext_slider_mesg1">Location based system will help us to accurate attendance and much more </string>
+    <string name="gtext_slider_mesg2">So now you can track your activity using map or in list view</string>
+    <string name="gtext_slider_mesg3">We also take care for your Event,leaves its very easy to use so lets start</string>
+</resources>

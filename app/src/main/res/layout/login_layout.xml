@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="35dp"
+        android:layout_marginTop="25dp"
+        android:paddingRight="35dp">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/btnexplore"-->
+        <!--android:layout_width="85dp"-->
+        <!--android:layout_height="85dp"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@drawable/chaticon" />-->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Welcome To GeoAttendance"
+            android:textColor="@color/tikdark"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/txtsmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_below="@+id/textView"
+            android:text="Enter your credentials to continue"
+            android:textColor="@color/tiklightgray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/credlinear"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/geoattend" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/textView23"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:id="@+id/credlinear"
+            android:orientation="vertical"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|right">
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="05dp"
+                    android:hint="UserName"
+                    android:inputType="text"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="36dp"
+                    android:textColor="@color/tikdark"
+                    android:textColorHint="@color/loginedtBack"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|right">
+
+
+                <Button
+                    android:id="@+id/forgotBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/input_password"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="top|center"
+                    android:visibility="invisible"
+                    android:text="Forgot Password?"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightgreen"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:drawablePadding="09dp"
+                    android:hint="Pin"
+                    android:inputType="textPassword"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="36dp"
+                    android:textColor="@color/tikdark"
+                    android:textColorHint="@color/loginedtBack"
+                    android:imeOptions="actionDone"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape"
+                android:text="Login to my account"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:id="@+id/viewdivider"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.1dp"-->
+        <!--android:layout_above="@+id/textView23"-->
+        <!--android:background="@color/appbackcolor"></View>-->
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Don't have an account? Sign up."
+            android:textColor="@color/tikdark"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/LoginProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

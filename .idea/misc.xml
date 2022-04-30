@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GeoAttend/app/src/main/res/layout/adapter_intro_pager.xml" value="0.25052083333333336" />
+        <entry key="..\:/GeoAttend/app/src/main/res/layout/introscreen_layout.xml" value="0.25052083333333336" />
+        <entry key="..\:/GeoAttend/app/src/main/res/layout/login_layout.xml" value="0.25052083333333336" />
+        <entry key="..\:/GeoAttend/app/src/main/res/layout/login_screen.xml" value="0.25052083333333336" />
+        <entry key="..\:/GeoAttend/app/src/main/res/layout/profile_activity.xml" value="0.25052083333333336" />
+        <entry key="..\:/GeoAttend/app/src/main/res/layout/signup_layout.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/CodeR/Downloads/GeoAttendance/app/src/main/res/layout/signup_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/CodeR/Downloads/GeoAttendance/app/src/main/res/layout/testtime.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
