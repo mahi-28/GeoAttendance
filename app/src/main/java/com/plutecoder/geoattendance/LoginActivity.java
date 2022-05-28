@@ -72,6 +72,8 @@ public class LoginActivity extends AppCompatActivity {
         EdtPass.setTypeface(Typeface.DEFAULT);
         EdtPass.setTransformationMethod(new PasswordTransformationMethod());
         pb = (ProgressBar) findViewById(R.id.LoginProgress);
+//            clearEmail = (ImageButton) findViewById(R.id.clearEmail);
+//            clearPass = (ImageButton) findViewById(R.id.clearPassword);
         TextView textView2 = (TextView) findViewById(R.id.textView);
         try {
             if (Typefaces.get(LoginActivity.this, "HelveticaNeue Light") != null) {
@@ -80,9 +82,6 @@ public class LoginActivity extends AppCompatActivity {
                 EdtPass.setTypeface(Typefaces.get(LoginActivity.this, "HelveticaNeue Light"));
                 btnForgotPass.setTypeface(Typefaces.get(LoginActivity.this, "HelveticaNeueLt"));
                 txtsignup.setTypeface(Typefaces.get(LoginActivity.this, "HelveticaNeue Light"));
-//
-//                txtwelcome.setTypeface(Typefaces.get(LoginActivity.this, "HelveticaNeueBd"));
-//                        txtsignintext.setTypeface(Typefaces.get(LoginActivity.this, "HelveticaNeue Medium"));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -102,6 +101,8 @@ public class LoginActivity extends AppCompatActivity {
                     if (!isEmpty(EdtEmail.getText().toString()) && !isEmpty(EdtPass.getText().toString())) {
                         String username = EdtEmail.getText().toString();
                         String userpin = EdtPass.getText().toString();
+                        //signIn(EdtEmail.getText().toString()+ Constant.domain,EdtPass.getText().toString(),"");
+
                             AnnonmSignup(username, userpin);
 
                     } else {
@@ -112,8 +113,11 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //  PreferenceHelper.storeLoginstatus(SignupActivity.this,true);
         try{
             Utility.checkPermission(LoginActivity.this);
+         //   Utility.checkPermissionreadphonestatuts(LoginActivity.this);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -176,6 +180,7 @@ public class LoginActivity extends AppCompatActivity {
                         System.out.println("---------"+dataSnapshot.toString());
                         if (dataSnapshot.exists())
                         {
+
                             for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                 // UserGtSt user = snapshot.getValue(UserGtSt.class);
                                 pb.setVisibility(View.INVISIBLE);
@@ -197,6 +202,7 @@ public class LoginActivity extends AppCompatActivity {
                                             PreferenceHelper.storename(LoginActivity.this, yourData.get("name").toString());
                                             PreferenceHelper.storeusercode(LoginActivity.this, yourData.get("code").toString());
                                             PreferenceHelper.storeLoginstatus(LoginActivity.this, true);
+                                            // Toast.makeText(LoginActivity.this, "Successfully Logged", Toast.LENGTH_SHORT).show();
                                             if(username.equals("admin")){
                                                 Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
                                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
