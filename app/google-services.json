@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "364102556302",
-    "project_id": "april26-a29c1",
-    "storage_bucket": "april26-a29c1.appspot.com"
+    "project_number": "508216588903",
+    "project_id": "junegeo-26b70",
+    "storage_bucket": "junegeo-26b70.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:364102556302:android:9b448fc95377a27c7cc7df",
+        "mobilesdk_app_id": "1:508216588903:android:c2409b7e46ad9b351f32c2",
         "android_client_info": {
           "package_name": "com.plutecoder.geoattendance"
         }
       },
       "oauth_client": [
         {
-          "client_id": "364102556302-356s99ghadtib9k8crbtjqedbnnf9gse.apps.googleusercontent.com",
+          "client_id": "508216588903-hglqjpubkd1qeej6nlfs3c0b2pdm1dpp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBvX7cujigkurecOBtlCB5cQjqP_5pi9xg"
+          "current_key": "AIzaSyBhzPfTgSUAsxEpb53SvFwL9Jh4uyj-H9E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "364102556302-356s99ghadtib9k8crbtjqedbnnf9gse.apps.googleusercontent.com",
+              "client_id": "508216588903-hglqjpubkd1qeej6nlfs3c0b2pdm1dpp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

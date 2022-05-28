@@ -79,6 +79,20 @@
                     android:textColor="@android:color/darker_gray"
                     android:textSize="13sp" />
 
+                <Button
+                    android:id="@+id/btnreport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/staffname"
+                    android:layout_alignBaseline="@+id/designation"
+                    android:layout_alignBottom="@+id/designation"
+                    android:layout_marginStart="96dp"
+                    android:layout_marginTop="-8dp"
+                    android:layout_marginBottom="-19dp"
+                    android:layout_toEndOf="@+id/designation"
+                    android:text="generate reports"
+                    android:textSize="10sp" />
+
                 <TextView
                     android:id="@+id/iteam_avilable"
                     android:layout_width="wrap_content"
@@ -154,6 +168,8 @@
                         android:textSize="14sp"
                />
                 </RelativeLayout>
+
+
 
 
             </RelativeLayout>

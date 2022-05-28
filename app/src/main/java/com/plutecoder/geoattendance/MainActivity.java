@@ -217,6 +217,8 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
             e.printStackTrace();
         }
     }
+
+    //shail change get current location
     private void startLocationListener() {
         try {
 
@@ -287,6 +289,13 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
         StringBuilder date=new StringBuilder().append(day).append("/")
                 .append(month).append("/").append(year);
         dateselected=date.toString();
+        //System.out.println("selcedtdate====="+dateselected);
+//        Fragment_Mytime fragment = (Fragment_Mytime) getFragmentManager().findFragmentById(R.id.container_body);
+//        fragment.setclockonoff(dateselected);
+//
+//        Fragment_Mytime fragment = (Fragment_Mytime) getSupportFragmentManager().findFragmentById(R.id.container_body);
+//        fragment.setclockonoff(dateselected);
+       // setclockonoff(MainActivity.dateselected);
 
         try{
             if(!PreferenceHelper.getClockOnOffDate(MainActivity.activity).equals(dateselected)){
@@ -300,6 +309,8 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
             e.printStackTrace();
         }
         return date.toString();
+//        dateView.setText(new StringBuilder().append(day).append("/")
+//                .append(month).append("/").append(year));
     }
     boolean isBetterLocation(Location oldLocation, Location newLocation) {
         try {
@@ -446,6 +457,7 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
 
     //set status of connection using UI Thread
     public void replaceFragment(final Fragment targetFragment, final String msg) {
+
         clearFragmentBackStack();
         System.gc();
         //start thread here for 1 sec
@@ -516,7 +528,6 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
     }
     @Override
     public void onBackStackChanged() {
-
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
@@ -556,6 +567,7 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
         }
 
         private void update(String e){
+
         }
 
     }

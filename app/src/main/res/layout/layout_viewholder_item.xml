@@ -33,77 +33,82 @@
             android:textColor="@color/colorWhite"
             android:layout_marginBottom="@dimen/eight"
            />
+
         <LinearLayout
-            android:layout_marginLeft="@dimen/pad_3dp"
+            android:id="@+id/L1"
+            android:layout_width="394dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/pad_3dp"
+            android:layout_marginLeft="@dimen/pad_3dp"
             android:layout_weight="2"
             android:gravity="left"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/L1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
-                android:layout_marginLeft="24dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="@dimen/eight"
                 android:id="@+id/in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/textView2"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="@dimen/eight"
                 android:layout_toEndOf="@+id/textView2"
                 android:layout_toRightOf="@+id/textView2"
                 android:text="IN"
                 android:textColor="@color/colorlightgrey"
                 android:textSize="@dimen/txt_14sp" />
+
             <LinearLayout
-                android:layout_marginLeft="@dimen/pad_1dp"
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pad_1dp"
+                android:orientation="horizontal">
+
                 <ImageView
-                    android:visibility="invisible"
-                    android:layout_gravity="bottom"
                     android:layout_width="10dp"
-                    android:layout_height="10dp" />
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    android:visibility="invisible" />
+
                 <TextView
-                    android:textColor="@color/colordakgrey"
                     android:id="@+id/tvintime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/eight"
                     android:layout_marginLeft="@dimen/pad_10dp"
+                    android:layout_marginTop="@dimen/eight"
                     android:text=""
+                    android:textColor="@color/colordakgrey"
                     android:textSize="@dimen/txt_11sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_marginLeft="@dimen/pad_3dp"
-                    android:textColor="@color/colordakgrey"
                     android:id="@+id/tvapprovedintime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/textView2"
                     android:layout_alignEnd="@+id/textView3"
                     android:layout_alignRight="@+id/textView3"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_marginLeft="@dimen/pad_3dp"
                     android:layout_marginTop="@dimen/eight"
                     android:text=""
+                    android:textColor="@color/colordakgrey"
                     android:textSize="@dimen/txt_11sp"
                     android:textStyle="bold" />
             </LinearLayout>
+
             <TextView
-                android:layout_marginLeft="24dp"
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/textView2"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"
                 android:text=""
                 android:textColor="@color/colorlightgrey"
                 android:textSize="@dimen/txt_10sp" />
         </LinearLayout>
+
 
 
 
@@ -172,6 +177,74 @@
                 android:textSize="@dimen/txt_10sp" />
 
         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/pad_1dp"
+            android:layout_weight="2"
+            android:id="@+id/L3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/L1"
+            android:orientation="vertical"
+            android:layout_alignBottom="@+id/view">
+
+            <TextView
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="@dimen/eight"
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TT"
+                android:textColor="@color/colorlightgrey"
+                android:textSize="@dimen/txt_14sp" />
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/pad_1dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_gravity="bottom"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:textColor="@color/colordakgrey"
+                    android:id="@+id/tvTotaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/eight"
+                    android:text=""
+                    android:textSize="@dimen/txt_11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pad_3dp"
+                    android:textColor="@color/colordakgrey"
+                    android:id="@+id/tvapprovedTotaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/eight"
+                    android:text=""
+                    android:textSize="@dimen/txt_11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="24dp"
+                android:id="@+id/tvstandardTotaltime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorlightgrey"
+                android:textSize="@dimen/txt_10sp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <View

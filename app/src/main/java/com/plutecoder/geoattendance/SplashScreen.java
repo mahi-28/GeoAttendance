@@ -37,7 +37,7 @@ public class SplashScreen extends AppCompatActivity {
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         if (user != null) {
                             // User is signed in.
-                            if (PreferenceHelper.getusername(SplashScreen.this).equals("Admin user")) {
+                            if (PreferenceHelper.getusername(SplashScreen.this).equals("Admin")) {
                                 Intent i = new Intent(SplashScreen.this, AdminActivity.class);
                                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(i);

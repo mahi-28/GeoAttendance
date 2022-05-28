@@ -150,6 +150,13 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
+        btnsignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 startActivity(new Intent(SignupActivity.this , LoginActivity.class));
+            }
+        });
+
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,6 +182,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
         });
+
         try {
             Utility.checkPermission(SignupActivity.this);
             // Utility.checkPermissionreadphonestatuts(SignupActivity.this);
@@ -196,6 +204,8 @@ public class SignupActivity extends AppCompatActivity {
 
             CategoryMainTM categoryMainTM4 = new CategoryMainTM();
             categoryMainTM4.setDesignation("Principal");
+
+
             categoryMainTMS.add(categoryMainTM1);
             categoryMainTMS.add(categoryMainTM2);
             categoryMainTMS.add(categoryMainTM3);
@@ -211,6 +221,8 @@ public class SignupActivity extends AppCompatActivity {
         spdesignation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+
+                // your code here
                 CategoryMainTM selection = (CategoryMainTM) spdesignation.getSelectedItem();
 
                 try {
@@ -220,11 +232,19 @@ public class SignupActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+
+
             }
+
+
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
             }
+
         });
+
+
     }
 
     public void AnnonmSignup(final String displayname, final String username, final String pin) {
@@ -288,6 +308,9 @@ public class SignupActivity extends AppCompatActivity {
                             } else {
                                 pb.setVisibility(View.INVISIBLE);
                             }
+//                    for (DataSnapshot issue : dataSnapshot.getChildren()) {
+//                        // do something with the individual "issues"
+//                    }
                         } else {
                             // pb.setVisibility(View.INVISIBLE);
                             authodata(displayname, username, pin);
@@ -328,6 +351,9 @@ public class SignupActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        // FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         final String myuid = mDatabase.push().getKey();
         // mDatabase.push();
@@ -403,6 +429,16 @@ public class SignupActivity extends AppCompatActivity {
                 rowview = flater.inflate(R.layout.listitem_layout, null, false);
 
                 holder.txtTitle = (TextView) rowview.findViewById(R.id.spinnertext);
+//                try {
+//                    if (Typefaces.get(context, "CharlotteSans_nn") != null) {
+//
+//                        holder.txtTitle.setTypeface(Typefaces.get(context, "CharlotteSans_nn"));
+//
+//
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
                 rowview.setTag(holder);
             } else {
                 holder = (CustomAdapterMainCategory.viewHolder) rowview.getTag();

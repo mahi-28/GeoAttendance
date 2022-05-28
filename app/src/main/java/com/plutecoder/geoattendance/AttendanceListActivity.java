@@ -50,11 +50,16 @@ import utils.Typefaces;
 public class AttendanceListActivity extends AppCompatActivity {
     private LinearLayoutManager mLayoutManager;
     ProgressBar pb;
+    //  FloatingActionButton fabadduser;
+    // FloatingActionButton addcontact;
+
     private JSONArray listFriendID = new JSONArray();
 
 
     ArrayList<ClockOnOffGtSt> friendlist;
     private GridLayoutManager lLayout;
+
+    // private RecyclerView recyclerView;
     int check = 0;
 
     private DatabaseReference mFirebaseDatabase;
@@ -146,12 +151,53 @@ try {
                         HashMap<String, Object> yourData = (HashMap<String, Object>) alert.getValue();
                         ClockOnOffGtSt userGtSt = new ClockOnOffGtSt();
                         userGtSt.setDate(isweekendday(yourData.get("date").toString()));
+
+//                       // userGtSt.setDate((String) yourData.get("date"));
+//                        try{
+//
+//                            if(isweekenddaysunday(yourData.get("date").toString()).equals("Sunday")){
+//                              userGtSt.setIsweeklyoff(true);
+//                          }else{
+//                              userGtSt.setIsweeklyoff(false);
+//
+//                          }
+//                            System.out.println("is data----------isweeklyoff------" + userGtSt.isweeklyoff);
+//
+//                        }catch (Exception e){
+//                            e.printStackTrace();
+//                        }
                         userGtSt.setIntime((String) yourData.get("intime"));
                         userGtSt.setIsonleave((boolean) yourData.get("isonleave"));
                         userGtSt.setIsweeklyoff((boolean) yourData.get("isweeklyoff"));
                         userGtSt.setOuttime((String) yourData.get("outtime"));
+
                         friendlist.add(userGtSt);
+
+//                        HashMap<String, Object> yourData = (HashMap<String, Object>) alert.getValue();
+//                       // Iterable<DataSnapshot> last=  alert.getChildren();
+//                      //  alert.getChildren().g
+//                        System.out.println("vidhanSabha------------"+ yourData.get("name"));
                         UserGtSt categoryMainTM = new UserGtSt();
+//                        categoryMainTM.setUseruid(alert.getKey().toString());
+//                        categoryMainTM.setCategory_name(alert.child("vidhanSabha").getValue().toString());
+//
+//                        //  DataSnapshot gramachild= (DataSnapshot) alert.child("gramm").getChildren();
+//
+//
+//                        ArrayList<SubCategoryTm> subCategoryTms = new ArrayList<>();
+//                        for (DataSnapshot grama : alert.child("gramm").getChildren()) {
+//                            if (grama.child("gramm").getValue() != null) {
+//                                //   System.out.println("gramaaa ------------" + grama.child("gramm").getValue().toString());
+//                                SubCategoryTm subCategoryTm = new SubCategoryTm();
+//                                subCategoryTm.setSub_cat_id(grama.getKey().toString());
+//                                subCategoryTm.setSub_cat_name(grama.child("gramm").getValue().toString());
+//
+//                                subCategoryTms.add(subCategoryTm);
+//                            }
+//                        }
+//
+//                        categoryMainTM.setSubCategoryTmArrayList(subCategoryTms);
+//                        categoryMainTMS.add(categoryMainTM);
                     }
                     if (friendlist != null && !friendlist.isEmpty()) {
                         pb.setVisibility(View.INVISIBLE);
@@ -165,6 +211,9 @@ try {
 
                 @Override
                 public void onCancelled(DatabaseError error) {
+                    //  avLoadingIndicatorView.hide();
+                    // Failed to read value
+                    // Log.w(TAG,"Failed to read value.",error.toException());
                     pb.setVisibility(View.INVISIBLE);
                 }
             });
@@ -177,6 +226,9 @@ try {
     public String isweekendday(String strdate){
         try {
             Date date = stringToDate(strdate);
+// 3 letter name form of the day
+            // System.out.println(new SimpleDateFormat("EE", Locale.getDefault()).format(dateobj.getTime()));
+// full name form of the day
             System.out.println(new SimpleDateFormat("EEEE", Locale.getDefault()).format(date.getTime()));
             String finaldate = strdate + "\n" + new SimpleDateFormat("EEEE", Locale.getDefault()).format(date.getTime()).toString();
             return finaldate;
@@ -188,6 +240,9 @@ try {
     public String isweekenddaysunday(String strdate){
         try {
             Date date = stringToDate(strdate);
+// 3 letter name form of the day
+            // System.out.println(new SimpleDateFormat("EE", Locale.getDefault()).format(dateobj.getTime()));
+// full name form of the day
             System.out.println(new SimpleDateFormat("EEEE", Locale.getDefault()).format(date.getTime()));
             String finaldate =  "\n" + new SimpleDateFormat("EEEE", Locale.getDefault()).format(date.getTime()).toString();
             return finaldate;
@@ -250,6 +305,11 @@ try {
         @Override
         public void onBindViewHolder(RecyclerViewHoldershor holder, final int position) {
             ClockOnOffGtSt userGtSt=itemList.get(position);
+
+//            holder.teachername.setText(userGtSt.getName());
+//            holder.subjectname.setText(userGtSt.getUsername());
+//            holder.descr.setText(userGtSt.getPin());
+
             if(userGtSt.isonleave){
                 holder.textViewDate.setBackgroundResource(R.drawable.circularbackgroundorange);
                 holder.textViewDate.setText(userGtSt.getDate());
@@ -270,6 +330,14 @@ try {
                 holder.tvintime.setText(userGtSt.getIntime());
                 holder.tvapprovedouttime.setText(userGtSt.getOuttime());
             }
+
+
+//            holder.positiontitle.setTextColor(color[position]);
+//            holder.positiontitle.setText(userGtSt.getStandard());
+//            holder.positiontitle.setBackgroundColor(adjustAlpha(color[position], 0.1f));
+
+
+
         }
 
         @Override
